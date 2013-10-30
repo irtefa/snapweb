@@ -1,26 +1,28 @@
 <html>
   <head>
     <title>HTML 5 camera</title>
-    <script type='text/JavaScript' src='js/camera.js'></script>
-    <style>
-        body{font-family:Sans-Serif;}
-        canvas{position:absolute; left: -9999em;}
-        #button{background-color: Red; color: #fff; padding: 3px 10px; cursor:pointer; display: inline-block; border-radius: 5px;}
-        #sidebar{float:right; width: 45%;}
-        #main{float:left; width: 45%;}
-        #imageToForm{width:100%;}
-        #preview{margin: 20px 0;}
-        label{display: block;}
-    </style>
+    <link rel='stylesheet' type='text/css' href='css/main.css'>
   </head>
   <body>
-    <!--
-        Ideally these elements aren't created until it's confirmed that the 
-        client supports video/camera, but for the sake of illustrating the 
-        elements involved, they are created with markup (not JavaScript)
-    -->
-    <video id="video" width="640" height="480" autoplay></video>
-    <button id="snap">Snap Photo</button>
-    <canvas id="canvas" width="640" height="480"></canvas>
-</body>
+    <div id="main">
+        <video id="video"></video>
+        <h2>Take your picture by clicking the Snap! Button</h2>
+    </div>
+
+    <div id="sidebar">
+        <a id="button">Snap!</a>
+
+        <!-- target for the canvas-->
+        <div id="canvasHolder"></div>
+
+        <!--preview image captured from canvas-->
+        <img id="preview" src="http://www.clker.com/cliparts/A/Y/O/m/o/N/placeholder-hi.png" width="160" height="120" />
+
+        <label>base64 image:</label>
+        <input id="imageToForm" type="text" />
+  
+    </div>
+    <script type='text/javascript' src='js/camera.js'></script>
+
+  </body>
 </html>
