@@ -10,5 +10,10 @@ $(document).ready( function(){
         context.fillStyle = 'white';
         context.fillText(grabbedText, 320, 240);
     });
+
+    //hide canvas on click
+    $('#hideCanvas').click(function() {
+        $('#canvasHolder').hide();
+    })
 });
 
