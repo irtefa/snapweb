@@ -13,7 +13,7 @@ canvas.addEventListener("mouseup", drawcanvas, false);
 function drawcanvas(event){
     var x = event.x;
     var y = event.y;
-    var canvas = document.getElementById("canvas");
+    var canvas = document.getElementById('preview');
 
     x -= canvas.offsetLeft;
     y -= canvas.offsetTop;
