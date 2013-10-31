@@ -13,7 +13,7 @@ $(document).ready( function(){
 
     //hide canvas on click
     $('#hideCanvas').click(function() {
-        $('#canvasHolder').hide();
+        $('#video').hide();
     })
 });
 
