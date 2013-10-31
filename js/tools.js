@@ -15,5 +15,11 @@ $(document).ready( function(){
     $('#button').click(function() {
         $('#video').hide();
     })
+
+    //show canvas on click
+    $('#showCanvas').click(function() {
+        $('#video').show();
+    })
+
 });
 
