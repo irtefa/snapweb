@@ -24,15 +24,15 @@ function captureImage() {
     var canvas = document.createElement('canvas');
     canvas.id = 'hiddenCanvas';
     //add canvas to the body element
-    //document.body.appendChild(canvas);
+    document.body.appendChild(canvas);
     //add canvas to #canvasHolder
-    //document.getElementById('canvasHolder').appendChild(canvas);
-    //var ctx = canvas.getContext('2d');
-    //canvas.width = video.videoWidth;
-    //canvas.height = video.videoHeight;
-    //ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+    document.getElementById('canvasHolder').appendChild(canvas);
+    var ctx = canvas.getContext('2d');
+    canvas.width = video.videoWidth;
+    canvas.height = video.videoHeight;
+    ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
     //save canvas image as data url
-    //dataURL = canvas.toDataURL();
+    dataURL = canvas.toDataURL();
     //set preview image src to dataURL
     //document.getElementById('preview').src = dataURL;
     // place the image value in the text box
