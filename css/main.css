@@ -1,8 +1,10 @@
-        body{font-family:Sans-Serif;}
-        canvas{position:absolute; left: -9999em;}
-        #button{background-color: Red; color: #fff; padding: 3px 10px; cursor:pointer; display: inline-block; border-radius: 5px;}
-        #sidebar{float:right; width: 45%;}
-        #main{float:left; width: 45%;}
-        #imageToForm{width:100%;}
-        #preview{margin: 20px 0;}
-        label{display: block;}
+body{font-family:Sans-Serif;}
+canvas{position:absolute;}
+#button{background-color: Red; color: #fff; padding: 3px 10px; cursor:pointer; display: inline-block; border-radius: 5px;}
+#sidebar{float:right; width: 45%;}
+#main{float:left; width: 45%;}
+#imageToForm{width:100%;}
+#preview {
+    margin: 20px 0;
+}
+label{display: block;}
