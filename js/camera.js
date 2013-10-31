@@ -34,9 +34,13 @@ function captureImage() {
     //save canvas image as data url
     dataURL = canvas.toDataURL();
     //set preview image src to dataURL
-    document.getElementById('preview').src = dataURL;
+    //document.getElementById('preview').src = dataURL;
     // place the image value in the text box
-    document.getElementById('imageToForm').value = dataURL;
+    //document.getElementById('imageToForm').value = dataURL;
+    /* my shit */
+    var previewCanvas = document.getElementById('preview');
+    var previewContext = previewCanvas.getContext('2d');
+    previewContext.drawImage(dataURL, 10, 10);
 }
 
 //Bind a click to a button to capture an image from the video stream

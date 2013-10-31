@@ -16,13 +16,24 @@
         <div id="canvasHolder"></div>
 
         <!--preview image captured from canvas-->
-        <img id="preview" src="http://www.clker.com/cliparts/A/Y/O/m/o/N/placeholder-hi.png" width="160" height="120" />
+        <canvas id="preview" src="http://www.clker.com/cliparts/A/Y/O/m/o/N/placeholder-hi.png" width="160" height="120" />
 
         <label>base64 image:</label>
         <input id="imageToForm" type="text" />
-  
+        <div class="colors">
+        <p>
+            Pick a color to draw with!
+        </p>
+        <ul id="color-list">
+            <li id="red">Red</li>
+            <li id="blue">Blue</li>
+            <li id="green">Green</li>
+        </ul>
+      </div>
     </div>
+    <script type='text/javascript' src='js/vendor/jquery.min.js'></script>
     <script type='text/javascript' src='js/camera.js'></script>
-
+    <script type='text/javascript' src='js/draw.js'></script>
+    <script type='text/javascript' src='js/tools.js'></script>
   </body>
 </html>
