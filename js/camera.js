@@ -40,7 +40,7 @@ function captureImage() {
     /* my shit */
     var previewCanvas = document.getElementById('preview');
     var previewContext = previewCanvas.getContext('2d');
-    previewContext.drawImage(dataURL, 10, 10);
+    previewContext.drawImage(video, 0, 0, previewCanvas.width, previewCanvas.height);
 }
 
 //Bind a click to a button to capture an image from the video stream
