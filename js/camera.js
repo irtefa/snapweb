@@ -43,7 +43,7 @@ function captureImage() {
     //previewContext.drawImage(video, 0, 0, previewCanvas.width, previewCanvas.height);
     var img = new Image;
     img.onload = function(){
-        previewContext.drawImage(img,0,0); // Or at whatever offset you like
+        previewContext.drawImage(img, 10, 10); // Or at whatever offset you like
     };
     img.src = dataURL;
 }
