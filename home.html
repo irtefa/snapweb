@@ -4,8 +4,8 @@
     <link rel='stylesheet' type='text/css' href='css/main.css'>
   </head>
   <body>
-    <div id="main">
-        <video id="video"></video>
+    <div id='main'>
+        <video id='video'></video>
         <h2>Take your picture by clicking the Snap! Button</h2>
     </div>
 
@@ -14,27 +14,23 @@
 
         <!-- target for the canvas-->
         <div id="canvasHolder"></div>
-
-        <!--preview image captured from canvas-->
-        <canvas id="preview" width="640" height="480"><canvas/>
-      </div>
-
-        <label>base64 image:</label>
-        <input id="imageToForm" type="text" />
-        <p>
-            Pick a color to draw with!
-        </p>
-        <ul id="color-list">
-            <li id="red">Red</li>
-            <li id="blue">Blue</li>
-            <li id="green">Green</li>
-        </ul>
-        <form>
-        Message<input id='textBox' type='text' name='firstname'><br>
-        </form>
-        <div id='addText'>Text</div>
-        <div id='hideCanvas'>Hide</div>
     </div>
+
+    <label>base64 image:</label>
+    <input id="imageToForm" type="text" />
+    <p>
+        Pick a color to draw with!
+    </p>
+    <ul id="color-list">
+        <li id="red">Red</li>
+        <li id="blue">Blue</li>
+        <li id="green">Green</li>
+    </ul>
+    <form>
+    Message<input id='textBox' type='text' name='firstname'><br>
+    </form>
+    <div id='addText'>Text</div>
+    <div id='hideCanvas'>Hide</div>
     <script type='text/javascript' src='js/vendor/jquery.min.js'></script>
     <script type='text/javascript' src='js/camera.js'></script>
     <script type='text/javascript' src='js/draw.js'></script>

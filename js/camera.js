@@ -11,7 +11,7 @@ function setup() {
 }
 
 function connect(stream) {
-    video = document.getElementById("video");
+    video = document.getElementById('video');
     video.src = window.URL ? window.URL.createObjectURL(stream) : stream;
     video.play();
 }
@@ -33,20 +33,6 @@ function captureImage() {
     ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
     //save canvas image as data url
     dataURL = canvas.toDataURL();
-    //set preview image src to dataURL
-    //document.getElementById('preview').src = dataURL;
-    // place the image value in the text box
-    /*
-    document.getElementById('imageToForm').value = dataURL;
-    /* my shit 
-    var previewContext = document.getElementById('preview').getContext('2d');
-    //previewContext.drawImage(video, 0, 0, previewCanvas.width, previewCanvas.height);
-    var img = new Image;
-    img.onload = function(){
-        previewContext.drawImage(img, 0, 0); // Or at whatever offset you like
-    };
-    img.src = dataURL;
-    */
 }
 
 //Bind a click to a button to capture an image from the video stream
