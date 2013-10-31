@@ -26,7 +26,7 @@ function captureImage() {
     //add canvas to the body element
     document.body.appendChild(canvas);
     //add canvas to #canvasHolder
-    document.getElementById('canvasHolder').appendChild(canvas);
+    document.getElementById('main').appendChild(canvas);
     var ctx = canvas.getContext('2d');
     canvas.width = video.videoWidth;
     canvas.height = video.videoHeight;
