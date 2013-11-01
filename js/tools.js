@@ -1,6 +1,6 @@
 $(document).ready( function(){
     $('li').click( function(){
-        window.color = $(this).attr("id");
+        window.color = $(this).attr('id');
     });
 
     $('#addText').click(function() {

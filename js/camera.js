@@ -21,12 +21,13 @@ function error(e) { console.log(e); }
 addEventListener("load", setup);
 
 function captureImage() {
-    var canvas = document.createElement('canvas');
-    canvas.id = 'hiddenCanvas';
+    //var canvas = document.createElement('canvas');
+    var canvas = document.getElementById('canvas');
+    //canvas.id = 'hiddenCanvas';
     //add canvas to the body element
-    document.body.appendChild(canvas);
+    //document.body.appendChild(canvas);
     //add canvas to #canvasHolder
-    document.getElementById('main').appendChild(canvas);
+    //document.getElementById('main').appendChild(canvas);
     var ctx = canvas.getContext('2d');
     canvas.width = video.videoWidth;
     canvas.height = video.videoHeight;

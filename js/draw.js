@@ -1,14 +1,14 @@
 // global variable that holds what color it is
-window.color = "red";
+window.color = 'red';
 // initialization
 var canvas = document.getElementById('hiddenCanvas');
 var context = canvas.getContext('2d');
 var startedDrawing = false;
 
 // add event listener to check when user is clicking
-canvas.addEventListener("mousedown", drawcanvas, false);
-canvas.addEventListener("mousemove", drawcanvas, false);
-canvas.addEventListener("mouseup", drawcanvas, false);
+canvas.addEventListener('mousedown', drawcanvas, false);
+canvas.addEventListener('mousemove', drawcanvas, false);
+canvas.addEventListener('mouseup', drawcanvas, false);
 
 function drawcanvas(event){
     var x = event.x;
@@ -19,7 +19,7 @@ function drawcanvas(event){
     y -= canvas.offsetTop;
 
     // this is called when you start holding down the mouse button
-    if(event.type === "mousedown"){
+    if(event.type === 'mousedown'){
         context.beginPath();
         context.moveTo(x, y);
         startedDrawing = true;
