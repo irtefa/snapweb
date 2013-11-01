@@ -1,7 +1,7 @@
 // global variable that holds what color it is
 window.color = "red";
 // initialization
-var canvas = document.getElementById('preview');
+var canvas = document.getElementById('hiddenCanvas');
 var context = canvas.getContext('2d');
 var startedDrawing = false;
 
@@ -13,7 +13,7 @@ canvas.addEventListener("mouseup", drawcanvas, false);
 function drawcanvas(event){
     var x = event.x;
     var y = event.y;
-    var canvas = document.getElementById('preview');
+    var canvas = document.getElementById('hiddenCanvas');
 
     x -= canvas.offsetLeft;
     y -= canvas.offsetTop;
