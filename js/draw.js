@@ -25,13 +25,13 @@ function drawcanvas(event){
         startedDrawing = true;
     }
     // this function is called when you move the mouse if you already held the mouse button
-    else if(event.type === "mousemove" && startedDrawing === true){
+    else if(event.type === 'mousemove' && startedDrawing === true){
         context.lineTo(x, y);
         context.strokeStyle = window.color;
         context.stroke();
     }
     // this is called when you release the mouse button
-    else if(event.type === "mouseup" && startedDrawing === true){
+    else if(event.type === 'mouseup' && startedDrawing === true){
         startedDrawing = false;
     }
 

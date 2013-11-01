@@ -18,7 +18,7 @@ function connect(stream) {
 
 function error(e) { console.log(e); }
 
-addEventListener("load", setup);
+addEventListener('load', setup);
 
 function captureImage() {
     //var canvas = document.createElement('canvas');
@@ -37,5 +37,5 @@ function captureImage() {
 }
 
 //Bind a click to a button to capture an image from the video stream
-var el = document.getElementById("button");
-el.addEventListener("click", captureImage, false);
+var el = document.getElementById('button');
+el.addEventListener('click', captureImage, false);
