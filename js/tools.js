@@ -18,6 +18,7 @@ $(document).ready( function(){
 
     //show canvas on click
     $('#showCanvas').click(function() {
+        $('#hiddenCanvas').remove();
         $('#video').show();
     })
 
