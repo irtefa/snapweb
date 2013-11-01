@@ -22,7 +22,7 @@ addEventListener("load", setup);
 
 function captureImage() {
     //var canvas = document.createElement('canvas');
-    var canvas = document.getElementById('canvas');
+    var canvas = document.getElementById('hiddenCanvas');
     //canvas.id = 'hiddenCanvas';
     //add canvas to the body element
     //document.body.appendChild(canvas);
