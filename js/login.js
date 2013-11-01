@@ -28,7 +28,7 @@ $(document).ready( function() {
                         Parse.User.logIn(loginUserInfo.username, loginUserInfo.password, {
                           success: function(user) {
                             console.log("Logged in");
-                            window.location.replace('http://snapweb.herokuapp.com');
+                            window.location.replace('http://snapweb.herokuapp.com/dashboard.php');
                             $('#incorrect-password').hide();
                           },
                           error: function(user, error) {
@@ -68,7 +68,7 @@ $(document).ready( function() {
                                 console.log('user created');
                                 $('#user-exists').hide();
                                 $('#password-mismatch').hide();
-                                window.location.replace('http://snapweb.herokuapp.com');
+                                window.location.replace('http://snapweb.herokuapp.com/dashboard.php');
                             }
                         });    
                     } else {
