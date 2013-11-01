@@ -37,5 +37,5 @@ function captureImage() {
 }
 
 //Bind a click to a button to capture an image from the video stream
-var el = document.getElementById('button');
+var el = document.getElementById('snap-button');
 el.addEventListener('click', captureImage, false);
