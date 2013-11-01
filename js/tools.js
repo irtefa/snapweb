@@ -1,4 +1,6 @@
 $(document).ready( function(){
+    //check is user is logged in
+    
     $('li').click( function(){
         window.color = $(this).attr('id');
     });
@@ -11,13 +13,14 @@ $(document).ready( function(){
         context.fillText(grabbedText, 320, 240);
     });
 
-    //hide canvas on click
+    //hide video on click
     $('#snap-button').click(function() {
         $('#video').hide();
         $('#hiddenCanvas').show();
+        console.log(dataURL);
     })
 
-    //show canvas on click
+    //show video on click
     $('#showCanvas').click(function() {
         $('#hiddenCanvas').hide();
         $('#video').show();
