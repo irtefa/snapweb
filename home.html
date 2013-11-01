@@ -2,37 +2,26 @@
   <head>
     <title>HTML 5 camera</title>
     <link rel='stylesheet' type='text/css' href='css/main.css'>
-    <script type='text/javascript' src='js/parseApi.js'></script>
+    <script type='text/javascript' src='js/vendor/parse-1.2.12.min.js'></script>
   </head>
   <body>
-    <div id='main'>
-        <video id='video'></video>
-        <canvas id='hiddenCanvas'></canvas>
-    </div>
-    <div id='sidebar'>
-        <div id="canvasHolder"></div>
-    </div>
-    <div id='crap'>       
-        <label>base64</label>
-        <input id='imageToForm' type='text' />
-        <p>
-            Pick a color to draw with!
-        </p>
-        <ul id='color-list'>
-            <li id='red'>Red</li>
-            <li id='blue'>Blue</li>
-            <li id='green'>Green</li>
-        </ul>
-        <form>
-        Message<input id='textBox' type='text' name='firstname'><br>
+    <div id='form-holder'>
+        <form id='signup-form' hidden>
+            <input id='signup-username' type='text' placeholder='pick a username'><br>
+            <input id='phone-number' type='text' placeholder='phone number'><br>
+            <input id='signup-password' type='password' placeholder='choose a password'><br>
+            <input id='password-confirmation' type='password' placeholder='confirm password'><br>
+            <div id='create-button'>Create!</div>
         </form>
-        <div id='addText'>Text</div>
-        <div id='hideCanvas'>Hide</div>
-        <div id='showCanvas'>Show</div>
-        <a id='button'>Snap!</a>
+        <form id='login-form'>
+            <input id='login-username' type='text' placeholder='username'><br>
+            <input id='login-password' type='password' placeholder='password'><br>
+            <div id='login-button'>Login</div><br>
+            <div id='signup-button'>Signup</div><br>
+        </form>
     </div>
     <script type='text/javascript' src='js/vendor/jquery.min.js'></script>
-    <script type='text/javascript' src='js/camera.js'></script>
+    <script type='text/javascript' src='js/login.js'></script>
     <script type='text/javascript' src='js/draw.js'></script>
     <script type='text/javascript' src='js/tools.js'></script>
   </body>
