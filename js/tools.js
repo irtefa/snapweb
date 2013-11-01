@@ -12,13 +12,14 @@ $(document).ready( function(){
     });
 
     //hide canvas on click
-    $('#button').click(function() {
+    $('#snap-button').click(function() {
         $('#video').hide();
+        $('#hiddenCanvas').show();
     })
 
     //show canvas on click
     $('#showCanvas').click(function() {
-        $('#hiddenCanvas').remove();
+        $('#hiddenCanvas').hide();
         $('#video').show();
     })
 });
