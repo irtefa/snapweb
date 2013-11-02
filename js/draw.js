@@ -28,7 +28,7 @@ function drawcanvas(event){
     else if(event.type === 'mousemove' && startedDrawing === true) {
         context.lineTo(x, y);
         context.strokeStyle = window.color;
-        contex.lineWidth = 5;
+        context.lineWidth = 10;
         context.stroke();
     }
     // this is called when you release the mouse button
