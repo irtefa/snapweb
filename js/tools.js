@@ -1,5 +1,6 @@
 $(document).ready( function(){
     //check is user is logged in
+    $('#showCanvas').hide();
     
     $('li').click( function(){
         window.color = $(this).attr('id');
@@ -13,16 +14,19 @@ $(document).ready( function(){
         context.fillText(grabbedText, 320, 240);
     });
 
-    //hide video on click
+    //snap picture
     $('#snap-button').click(function() {
+        //hide video on click
         $('#video').hide();
         $('#hiddenCanvas').show();
+        $('#showCanvas').show();
         console.log(dataURL);
     })
 
     //show video on click
     $('#showCanvas').click(function() {
         $('#hiddenCanvas').hide();
+        $('#showCanvas').hide();
         $('#video').show();
     })
 });
