@@ -19,20 +19,20 @@ function drawcanvas(event){
     y -= canvas.offsetTop;
 
     // this is called when you start holding down the mouse button
-    if(event.type === 'mousedown'){
+    if(event.type === 'mousedown') {
         context.beginPath();
         context.moveTo(x, y);
         startedDrawing = true;
     }
     // this function is called when you move the mouse if you already held the mouse button
-    else if(event.type === 'mousemove' && startedDrawing === true){
+    else if(event.type === 'mousemove' && startedDrawing === true) {
         context.lineTo(x, y);
         context.strokeStyle = window.color;
         contex.lineWidth = 5;
         context.stroke();
     }
     // this is called when you release the mouse button
-    else if(event.type === 'mouseup' && startedDrawing === true){
+    else if(event.type === 'mouseup' && startedDrawing === true) {
         startedDrawing = false;
     }
 
