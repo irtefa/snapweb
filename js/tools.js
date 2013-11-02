@@ -1,6 +1,5 @@
 $(document).ready( function(){
     //check is user is logged in
-    $('#showCanvas').hide();
     
     $('li').click( function(){
         window.color = $(this).attr('id');

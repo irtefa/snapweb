@@ -1,4 +1,6 @@
 $(document).ready( function() {
+    //hide cancel button
+    $('#showCanvas').hide();
     //hide camera
     $('#snap-stuff').hide();
     //remove alerts
