@@ -21,7 +21,7 @@ body {
     width: 45%;
 }
 
-#imageToForm {
+#imageToForm {      
     width:100%;
 }
 #preview {
@@ -30,6 +30,5 @@ body {
 
 #crap {
     position:absolute;
-    float:left;
-    bottom: bottom;
+    float:right;
 }
