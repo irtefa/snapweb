@@ -7,7 +7,7 @@ body {
     float:left;
 }
 
-#snap-button #send-button #showCanvas{
+#snap-button, #send-button, #showCanvas{
     background-color: Red; 
     color: #fff; 
     padding: 3px 10px; 

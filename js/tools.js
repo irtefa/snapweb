@@ -31,8 +31,8 @@ $(document).ready( function(){
 
     //on send, send to the people its selected for
     $('#send-button').click(function() {
-        var context = document.getElementById('hiddenCanvas').getContext('2d');
-        var pictureDataURL = context.toDataURL();
+        var canvas = document.getElementById('hiddenCanvas');
+        var pictureDataURL = canvas.toDataURL();
         console.log(pictureDataURL);
     })
 });
