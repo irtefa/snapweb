@@ -16,7 +16,7 @@ $(document).ready( function(){
     //snap picture
     $('#snap-button').click(function() {
         //hide video on click
-        //$('#video').hide();
+        $('#video').hide();
         $('#hiddenCanvas').show();
         $('#showCanvas').show();
         console.log(dataURL);
