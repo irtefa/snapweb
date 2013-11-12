@@ -4,6 +4,7 @@ body {
 
 #hiddenCanvas {
     position:absolute; 
+    bottom: bottom;
     float:left;
 }
 
