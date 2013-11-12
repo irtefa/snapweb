@@ -28,4 +28,11 @@ $(document).ready( function(){
         $('#showCanvas').hide();
         $('#video').show();
     })
+
+    //on send, send to the people its selected for
+    $('#send-button').click(function() {
+        var context = document.getElementById('hiddenCanvas').getContext('2d');
+        var pictureDataURL = context.toDataURL();
+        console.log(pictureDataURL);
+    })
 });

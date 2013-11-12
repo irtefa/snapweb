@@ -7,7 +7,7 @@ body {
     float:left;
 }
 
-#snap-button {
+#snap-button #send-button #showCanvas{
     background-color: Red; 
     color: #fff; 
     padding: 3px 10px; 
@@ -29,6 +29,5 @@ body {
 }
 
 #crap {
-    position:absolute;
     float:right;
 }
