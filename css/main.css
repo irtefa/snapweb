@@ -27,3 +27,9 @@ body {
 #preview {
     margin: 20px 0;
 }
+
+#crap {
+    position:absolute;
+    float:left;
+    bottom: bottom;
+}
