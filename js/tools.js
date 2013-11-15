@@ -35,4 +35,10 @@ $(document).ready( function(){
         var pictureDataURL = canvas.toDataURL();
         console.log(pictureDataURL);
     })
+
+    //on message click, draw on canvas
+    $(document).on('click', '#messageElement', function() {
+        //console.log($this);
+        console.log($(this).attr('dataURL'));
+    })
 });

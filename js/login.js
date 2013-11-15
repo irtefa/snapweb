@@ -1,4 +1,6 @@
 $(document).ready( function() {
+    //hide messages div
+    //$('#messages').hide();
     //hide cancel button
     $('#showCanvas').hide();
     //hide camera
@@ -27,16 +29,44 @@ $(document).ready( function() {
                 success: function(userArray) {
                     if (userArray.length === 0) {
                         $('#login-form').hide();
-                        $('#signup-form').show();            
+                        $('#signup-form').show();  
+                        //show received messages and draw using dataURL
+                        //show snap-web users
                     } else {
                         Parse.User.logIn(loginUserInfo.username, loginUserInfo.password, {
                           success: function(user) {
                             console.log("Logged in");
-                            //window.location.replace('http://snapweb.herokuapp.com/dashboard.php');
                             $('#login-form').hide();
                             $('#signup-form').hide();
                             $('#snap-stuff').show();
                             $('#incorrect-password').hide();
+                            //populate #received-messages with dataURLs matching 'to' of the user
+                            var Message = Parse.Object.extend('Message');
+                            var messageQuery = new Parse.Query(Message);
+                            messageQuery.equalTo('ToUser', loginUserInfo.username);
+                            messageQuery.find({
+                                success: function(messageArray) {
+                                    for (var i = 0; i < messageArray.length; i++) {
+                                        $('#received-messages').append("<div id='messageElement' dataURL='"+messageArray[i]['attributes']['DataURL']+"'>Snap from " + messageArray[i]['attributes']['FromUser'] +"</div>");
+                                    }
+                                },
+                                error: function(object) {
+                                    console.log(object);
+                                }
+                            })
+                            //populate #snapweb-users with users of snapweb
+                            var usersQuery = new Parse.Query(User);
+                            usersQuery.find({
+                                success: function(userArray) {
+                                    for (var i = 0; i < userArray.length; i++) {
+                                        $('#snapweb-users').append("<div id='userElement'>"+userArray[i]['attributes']['username'] +"</div>");
+                                    }
+                                },
+                                error: function(object) {
+                                    console.log(object);
+                                }
+                            })
+                            //show div messages 
                           },
                           error: function(user, error) {
                             console.log("Error logging in");
