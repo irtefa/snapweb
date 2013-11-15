@@ -31,3 +31,8 @@ body {
 #crap {
     float:right;
 }
+
+#messages {
+    position: relative;
+    bottom: bottom;
+}
